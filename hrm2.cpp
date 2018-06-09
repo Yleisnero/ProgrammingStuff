@@ -5,7 +5,7 @@
 using namespace std;
 
 class BadLengthException { //tried to inherit public exception, somehow don't wanted to print const char* ¯\_(ツ)_/¯
-    public:
+    public:			//its working with : public exception for me (Jonas) 
     BadLengthException(int n) : n(n){}
     virtual const int what(){
         return n;
