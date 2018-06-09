@@ -33,15 +33,15 @@ int main() {
 	while(T--) {
 		long long A, B;
 		cin >> A >> B;
-		try {
-            Server::compute(A, B);
+	try {
+            cout << Server::compute(A, B) << endl; //you forgot cout here @liquidiert
         } catch(std::bad_alloc& bae){
             cout << "Not enough memory" << endl;
-        } catch(std::bad_exception& ex){
-            cout << "Other Exception" << endl;
         }catch(const std::exception& ex){
             cout << "Exception: " << ex.what() << endl;
-        } 
+        }catch (...) {
+            cout << "Other Exception" << endl; //put other exception to the end (handling every other exception)
+        }
 	}
 	cout << Server::getLoad() << endl;
 	return 0;
