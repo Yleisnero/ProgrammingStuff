@@ -59,7 +59,7 @@ class Student : public Person{
         for(int i = 0; i < 6; i++){
            sumOfMarks += marks[i];
         }
-        cout << this->name << " " << this->age << " " << this->sumOfMarks << " " << this->cur_id << endl;
+        cout << this->name << " " << this->age << " " << sumOfMarks << " " << this->cur_id << endl;
     }
 };
 int Student::id = 0;
