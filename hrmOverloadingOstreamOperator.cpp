@@ -14,7 +14,7 @@ private:
     string last_name_;
 };
 
-ostream & operator <<(ostream &outStream, Person p){
+ostream & operator <<(ostream &outStream, const Person &p){ //also possible only with: Person p (better with const, and reference)
     outStream << "first_name=" << p.get_first_name() << "," << "last_name=" << p.get_last_name();
     return outStream;
 }
