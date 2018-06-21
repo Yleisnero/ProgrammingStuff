@@ -88,7 +88,7 @@ int main(){
 	student meixi("Meixner", 4);
 	student zindy("Cindy", 0);
 	student loool("Dope", 3);
-  list<student> studentList;
+        list<student> studentList;
 	studentList.add(eumel);
 	studentList.add(hallo);
 	studentList.add(test);
