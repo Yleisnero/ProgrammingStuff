@@ -7,7 +7,7 @@ class sequence {
 	public: 
 		sequence(string input): toDelete(input){}
 		
-		string without(char delimiter, int &n){
+		string &without(char delimiter, int &n){
 			int count = 0;
 			n = 0;
 			for (char c : toDelete){
@@ -17,7 +17,14 @@ class sequence {
 				}
 				count++;
 			}
-			return toDelete;
+			/*string *result = new string(toDelete);
+			result->clear();
+			for (char c : toDelete){
+				if (c != delimiter){
+					result->append(1, c);
+				} else n++;
+			} HARD VARIANT*/
+			return toDelete // *result for HARD VARIANT */;
 		}
 	
 };
