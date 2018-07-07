@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <functional>
 #include <algorithm>
 
 enum struct Gattung {Gliedertier = 1, Vogel, Saeugetier, Weichtier, Fisch, Kriechtier, Spinne};
@@ -130,12 +131,13 @@ int main(){
 	loewe lo1("löwi", Gattung::Weichtier, 4);
 	tierpfleger tp1;
 
-	std::vector<tier> zoo; //working without pointers -> wrong output 
-	zoo.push_back(t1); //intention would be: vector<tier &> -> Errors
+	std::vector<std::reference_wrapper<tier>> zoo; //using std::reference_wrapper -> right output 
+	zoo.push_back(t1);
 	zoo.push_back(i1);
 	zoo.push_back(lo1);
 
-	for_each(zoo.begin(), zoo.end(), [&tp1](tier t){ tp1.fuettern(t); });
+	std::for_each(zoo.begin(), zoo.end(), [&tp1](tier &t/*each tier
+	has to be called by reference*/ ){ tp1.fuettern(t); });
 	
 
 return 0;
