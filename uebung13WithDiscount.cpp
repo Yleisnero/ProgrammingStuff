@@ -35,7 +35,7 @@ namespace myFuncs {
 		
 	};*/
 	
-	template <typename T> function<void(vector<T> &)> filter1 = [] (vector<T> &vec){
+	template <typename T> function<void(vector<T> &)> filter1 = [] (vector<T> &vec){ //#tembda
 		int count = 0;
 		for (T t : vec){
 			if ( t.cost < 500 )
