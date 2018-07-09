@@ -32,8 +32,7 @@ void sieb(int count){
 		nums.push_back(myNum(i));
 	}
 	
-	for(int i = 0; i < count-1; i++){
-				
+	for(int i = 0; i < count - 1; i++){
 			myNum zahl = nums[i]; //aktuell Zahl
 			cout << nums[i].getNum();
 			if(zahl.getMark() != true){
@@ -44,13 +43,17 @@ void sieb(int count){
 			}else{
 				cout << endl;
 			}
-		
 	}
 }
 
 int main(){
-
+ std::chrono::steady_clock::time_point start = std::chrono::steady_clock::now();
 	sieb (100);
+ std::chrono::steady_clock::time_point end = std::chrono::steady_clock::now();
+
+std::cout << "Printing took "
+              << std::chrono::duration_cast<std::chrono::microseconds>(end - start).count()
+              << "us.\n";
 
 return 0;
 }
