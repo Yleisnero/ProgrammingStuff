@@ -7,6 +7,7 @@ class sequence {
 	public: 
 		sequence(string input): toDelete(input){}
 		
+		//not working with foreach -> has to be done with normal for see Zindys and Joshis way
 		string &without(char delimiter, int &n){
 			int count = 0;
 			n = 0;
@@ -14,17 +15,29 @@ class sequence {
 				if(c == delimiter){
 					toDelete.erase(toDelete.begin()+count);
 					n++;
-				}
-				count++;
+				} else count++;
 			}
-			/*string *result = new string(toDelete);
+			
+			/* n= 0;
+			string *result = new string(toDelete);
 			result->clear();
 			for (char c : toDelete){
 				if (c != delimiter){
 					result->append(1, c);
 				} else n++;
-			} HARD VARIANT*/
-			return toDelete // *result for HARD VARIANT */;
+			} /*HARD VARIANT*/
+			
+			/* Zindy and Joshis way
+			n = 0;
+			for(int i = 0; toDelete[i] != '\0'; i++){
+				if(toDelete[i]==delimiter){
+					toDelete.erase(toDelete.begin()+i);
+					n++;
+					i--;
+					
+				}
+			} */
+			return toDelete;  // *result for HARD VARIANT */;
 		}
 	
 };
