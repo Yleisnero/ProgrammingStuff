@@ -1,0 +1,3 @@
+Z:/PG Uebung/Uebung12/List/cmake-build-debug/CMakeFiles/List.dir
+Z:/PG Uebung/Uebung12/List/cmake-build-debug/CMakeFiles/edit_cache.dir
+Z:/PG Uebung/Uebung12/List/cmake-build-debug/CMakeFiles/rebuild_cache.dir
