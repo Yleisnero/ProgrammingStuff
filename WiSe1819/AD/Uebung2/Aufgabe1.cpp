@@ -1,3 +1,7 @@
+/*
+ * I have to admit I´m proud of this code :)
+ */
+
 #include <iostream>
 #include <vector>
 #include <fstream>
@@ -12,7 +16,7 @@ enum class Command{LDK, STA, LDA, MUL, ADD, SUB, JGE, OUT, HLT};
 class Instruction{
 
 private:
-    string command; //
+    string command;
     int number; //address or constant
 
 public:
@@ -20,7 +24,7 @@ public:
         command = input.substr(0, input.find(' '));
         string numberString = input.substr(input.find(' ') + 1, input.find_last_of("/\\"));
         stringstream geek(numberString);
-        geek >> number; //Stream String into integer
+        geek >> number; //Stream String into integer (Maybe use atoi() ??)
     }
 
     void print(){
@@ -53,7 +57,7 @@ public:
         }
 
         mapCommands["LDK"] = Command::LDK;
-        mapCommands["STA"] = Command::STA,
+        mapCommands["STA"] = Command::STA;
         mapCommands["LDA"] = Command::LDA;
         mapCommands["MUL"] = Command::MUL;
         mapCommands["ADD"] = Command::ADD;
@@ -130,7 +134,7 @@ void RegSim::simulate(){
 
             case Command::OUT: cout << "Result: " << regi[ins.getNumber()] << endl; break;
 
-            case Command::HLT: exit(0);
+            case Command::HLT: exit(ins.getNumber());
 
             default: cerr << "Command not found"; exit(2);
         }
