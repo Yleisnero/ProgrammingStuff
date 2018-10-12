@@ -1,0 +1,21 @@
+LDK 5 	//Lade n
+STA 1 	//In Adresse 1 speichern
+
+LDK 1 	//Zahl 1 laden
+STA 3 	//Zahl 1 in Speicherzelle 3 speichern
+
+LDK 7	//Wert für Fortsetzung des Programms laden
+STA 4 	//Wert in Speicherzelle 4 ablegen
+
+LDA 1	//Wert aus Speicherzelle 1 laden
+MUL 1 	//Multipliziere Wert in Akku mit Wert in Speicherzelle 1
+ADD 2 	//Addiere zum Gesamtergebnis
+STA 2 	//Ergebnis in Speicherzelle 2 speichern
+
+LDA 1 	//Wert (n) aus Speicherzelle 1 laden
+SUB 3 	//n um Wert in Speicherzelle 3 (1) verringern
+
+JGE 4 	//PC an Adresse in Speicherzelle 4
+
+OUT 2 	//Ergebnis (aus Speicherzelle 2) ausgeben
+HLT 99 	//Programmende
