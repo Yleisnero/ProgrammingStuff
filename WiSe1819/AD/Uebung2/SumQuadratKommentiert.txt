@@ -14,6 +14,7 @@ STA 2 	//Ergebnis in Speicherzelle 2 speichern
 
 LDA 1 	//Wert (n) aus Speicherzelle 1 laden
 SUB 3 	//n um Wert in Speicherzelle 3 (1) verringern
+STA 1	//Wert wieder in Speicherzelle 1 laden
 
 JGE 4 	//PC an Adresse in Speicherzelle 4
 
