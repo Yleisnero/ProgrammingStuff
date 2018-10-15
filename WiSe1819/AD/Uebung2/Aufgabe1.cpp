@@ -1,7 +1,3 @@
-/*
- * I have to admit I´m proud of this code :)
- */
-
 #include <iostream>
 #include <vector>
 #include <fstream>
