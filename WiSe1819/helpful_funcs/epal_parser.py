@@ -4,7 +4,7 @@ epal code is easy to write and understand!
 This parser parses epal code to c++ code and compiles it to binary
 It also can be executed as pure python module
 When called in CLI, command should be like following example:
-python [epal_file] [binary_filename]
+python epal_parser.py [epal_file] [binary_filename]
 """
 import sys
 import re
