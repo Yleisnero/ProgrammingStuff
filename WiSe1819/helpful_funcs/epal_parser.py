@@ -2,11 +2,12 @@
 Parser for epal, your friendly, new programming language!
 epal code is easy to write and understand!
 This parser parses epal code to c++ code and compiles it to binary
+It also can be executed as pure python module
 """
 import sys
 import re
 
-if __name__ == "__main__":
+def epal_parser:
     with open("test.epal", 'r') as parse_file:
         with open("tester.cpp", 'w+') as parsed_file:
             parsed_file.write("#include <iostream>\nusing namespace std;\n")
