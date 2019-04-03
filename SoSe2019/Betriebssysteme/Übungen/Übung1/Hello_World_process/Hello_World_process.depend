@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1554287989 source:/home/standard/Desktop/Hello_World_process/main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
